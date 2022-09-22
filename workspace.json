@@ -5,6 +5,7 @@
     "consumer-app-test": "apps/consumer-app-test",
     "consumer-app-test-e2e": "apps/consumer-app-test-e2e",
     "hr": "libs/hr",
+    "rami": "libs/rami",
     "testing-nx": "apps/testing-nx",
     "testing-nx-e2e": "apps/testing-nx-e2e"
   }

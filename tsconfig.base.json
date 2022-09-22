@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@testin-nx/hr": ["libs/hr/src/index.ts"]
+      "@testin-nx/hr": ["libs/hr/src/index.ts"],
+      "@testin-nx/rami": ["libs/rami/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
