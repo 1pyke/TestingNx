@@ -1,0 +1,100 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "jest.config.json",
+  "apps": {
+    "ios.debug": {
+      "type": "ios.app",
+      "build": "cd ../consumer-app-test/ios && xcodebuild -workspace ConsumerAppTest.xcworkspace -scheme ConsumerAppTest -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' -derivedDataPath ./build -quiet",
+      "binaryPath": "../consumer-app-test/ios/build/Build/Products/Debug-iphonesimulator/ConsumerAppTest.app"
+    },
+    "ios.release": {
+      "type": "ios.app",
+      "build": "cd ../consumer-app-test/ios && xcodebuild -workspace ConsumerAppTest.xcworkspace -scheme ConsumerAppTest -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' -derivedDataPath ./build -quiet",
+      "binaryPath": "../consumer-app-test/ios/build/Build/Products/Release-iphonesimulator/ConsumerAppTest.app"
+    },
+
+    "ios.eas": {
+      "type": "ios.app",
+      "build": "npx nx run consumer-app-test:download --platform ios --distribution simulator --output=apps/consumer-app-test/dist/",
+      "binaryPath": "../consumer-app-test/dist/ConsumerAppTest.app"
+    },
+    "ios.local": {
+      "type": "ios.app",
+      "build": "npx nx run consumer-app-test:build --platform ios --profile preview --wait --local --no-interactive --output=apps/consumer-app-test/dist/",
+      "binaryPath": "../consumer-app-test/dist/ConsumerAppTest.app"
+    },
+
+    "android.debug": {
+      "type": "android.apk",
+      "build": "cd ../consumer-app-test/android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug",
+      "binaryPath": "../consumer-app-test/android/app/build/outputs/apk/debug/app-debug.apk"
+    },
+    "android.release": {
+      "type": "android.apk",
+      "build": "cd ../consumer-app-test/android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release",
+      "binaryPath": "../consumer-app-test/android/app/build/outputs/apk/release/app-release.apk"
+    },
+
+    "android.eas": {
+      "type": "ios.app",
+      "build": "npx nx run consumer-app-test:download --platform android --output=apps/consumer-app-test/dist/",
+      "binaryPath": "../consumer-app-test/dist/ConsumerAppTest.apk"
+    },
+    "android.local": {
+      "type": "ios.app",
+      "build": "npx nx run consumer-app-test:build --platform android --profile preview --wait --local --no-interactive --output=apps/consumer-app-test/dist/",
+      "binaryPath": "../consumer-app-test/dist/ConsumerAppTest.apk"
+    }
+  },
+  "devices": {
+    "simulator": {
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 13"
+      }
+    },
+    "emulator": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_4a_API_30"
+      }
+    }
+  },
+  "configurations": {
+    "ios.sim.release": {
+      "device": "simulator",
+      "app": "ios.release"
+    },
+    "ios.sim.debug": {
+      "device": "simulator",
+      "app": "ios.debug"
+    },
+
+    "ios.sim.eas": {
+      "device": "simulator",
+      "app": "ios.eas"
+    },
+    "ios.sim.local": {
+      "device": "simulator",
+      "app": "ios.local"
+    },
+
+    "android.emu.release": {
+      "device": "emulator",
+      "app": "android.release"
+    },
+    "android.emu.debug": {
+      "device": "emulator",
+      "app": "android.debug"
+    },
+
+    "android.emu.eas": {
+      "device": "simulator",
+      "app": "android.eas"
+    },
+    "android.emu.local": {
+      "device": "simulator",
+      "app": "android.local"
+    }
+  }
+}
