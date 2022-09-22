@@ -4,6 +4,8 @@
   "projects": {
     "consumer-app-test": "apps/consumer-app-test",
     "consumer-app-test-e2e": "apps/consumer-app-test-e2e",
+    "dayily-rotine": "apps/dayily-rotine",
+    "dayily-rotine-e2e": "apps/dayily-rotine-e2e",
     "hr": "libs/hr",
     "rami": "libs/rami",
     "testing-nx": "apps/testing-nx",
