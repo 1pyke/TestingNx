@@ -1,4 +1,6 @@
-
+log in user
+Email :manager@gmail.com
+Password:12345Abcd
 
 # MobileNxApps
 
