@@ -2,8 +2,18 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "hr": "libs/hr",
-    "testing-nx": "apps/testing-nx",
-    "testing-nx-e2e": "apps/testing-nx-e2e"
+    "appointment-mini-app": "libs/appointment-mini-app",
+    "auth-store": "libs/auth-store",
+    "clinc-container": "apps/clinc-container",
+    "clinc-container-e2e": "apps/clinc-container-e2e",
+    "clinc-container-v1": "libs/clinc-container-v1",
+    "default-app": "apps/default-app",
+    "default-app-e2e": "apps/default-app-e2e",
+    "hr-mini-app": "libs/hr-mini-app",
+    "referral-mini-app": "libs/referral-mini-app",
+    "wallet-mini-app": "libs/wallet-mini-app",
+    "service-mini-app": "libs/service-mini-app",
+    "provider-mini-app": "libs/provider-mini-app",
+    "quick-actions-mini-app": "libs/quick-actions-mini-app"
   }
 }

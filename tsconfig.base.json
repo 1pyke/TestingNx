@@ -15,7 +15,24 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@testin-nx/hr": ["libs/hr/src/index.ts"]
+      "@mobile-nx-apps/appointment-mini-app": [
+        "libs/appointment-mini-app/src/index.ts"
+      ],
+      "@mobile-nx-apps/auth-store": ["libs/auth-store/src/index.ts"],
+      "@mobile-nx-apps/clinc-container-v1": [
+        "libs/clinc-container-v1/src/index.ts"
+      ],
+      "@mobile-nx-apps/hr-mini-app": ["libs/hr-mini-app/src/index.ts"],
+      "@mobile-nx-apps/referral-mini-app": [
+        "libs/referral-mini-app/src/index.ts"
+      ],
+      "@mobile-nx-apps/wallet-mini-app": ["libs/wallet-mini-app/src/index.ts"],
+      "@mobile-nx-apps/service-mini-app": ["libs/service-mini-app/src/index.ts"],
+      "@mobile-nx-apps/provider-mini-app": [
+        "libs/provider-mini-app/src/index.ts"
+      ],"@mobile-nx-apps/quick-actions-mini-app": [
+        "libs/quick-actions-mini-app/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "ClincContainer",
+    "slug": "clinc-container",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/laserLogo.png",
+    "splash": {
+      "image": "./assets/laserLogo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lieth.clinc-container"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/laserLogo.png",
+        "backgroundColor": "#000000"
+      }
+    },
+    "web": {
+      "favicon": "./assets/laserLogo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c71ff7d9-8830-45ae-964c-a4a82cee15f1"
+      }
+    }
+  }
+}

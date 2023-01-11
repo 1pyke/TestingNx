@@ -52,4 +52,5 @@ npm-debug.*
 web-build/
 
 
-apps/testing-nx-e2e/artifacts
+apps/default-app-e2e/artifacts
+apps/clinc-container-e2e/artifacts
